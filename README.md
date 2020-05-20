@@ -2,9 +2,12 @@
 
 ## 8 puzzle solver:
 
-It's a simple game , we are solving through three algorithms BFS , DFS , A*
+An 8 puzzle is a simple game consisting of a 3 x 3 grid (containing 9 squares). One of the squares is empty.
+The object is to move to squares around into different positions and having the numbers displayed in the "goal state".
+you can read more about it here :
+https://www.d.umn.edu/~jrichar4/8puz.html
 
-
+We are solving this probelm through 3 algorithms BFS,DFS,A*.
 
 ### Credits
 The game was developed by:
