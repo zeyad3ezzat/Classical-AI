@@ -1,6 +1,7 @@
-#in this repo we are implmenting two projects 
+#in this repo you will find two projects :
 
-##8 Puzzle solver :
+## 8 puzzle solver:
+
 It's a simple game , we are solving through three algorithms BFS , DFS , A*
 
 
