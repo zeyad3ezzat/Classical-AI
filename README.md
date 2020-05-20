@@ -1,17 +1,29 @@
-# RISK-Game-Player-vs-AI-Agent
+#in this repo we are implmenting two projects 
+
+##8 Puzzle solver :
+It's a simple game , we are solving through three algorithms BFS , DFS , A*
+
+
+
+
+
+
+
+
+## RISK-Game-Player-vs-AI-Agent
 The famous RISK game applied on Egypt map and played against AI agents with several search algorithms.
 
-# GUI 
+### GUI 
 Developed using JavaFX.
 
 
-# Maps
+### Maps
 Egypt and USA maps are available.
 
 ![Egypt](https://user-images.githubusercontent.com/27583722/82118833-ff670500-9779-11ea-8bfe-27cc7fdd62dd.png)
 ![US map](https://user-images.githubusercontent.com/27583722/82118834-00983200-977a-11ea-9632-e64d5205aacb.png)
 
-# Playing Agents
+### Playing Agents
 You are required to provide four playing (Non-AI) agents, and four playing AI agents.
 
 Non-AI Agents:
@@ -39,7 +51,7 @@ AI Agents:
 4. A Minimax with alpha-beta pruning agent.
 
 
-# Samples
+### Samples
 ![1](https://user-images.githubusercontent.com/27583722/82118851-160d5c00-977a-11ea-9a1f-7d6ea9338e7b.png)
 ![2](https://user-images.githubusercontent.com/27583722/82118860-21608780-977a-11ea-920d-ee20c2b08b44.png)
 ![3](https://user-images.githubusercontent.com/27583722/82118864-2c1b1c80-977a-11ea-800d-c8407f990948.png)
@@ -47,7 +59,7 @@ AI Agents:
 ![5](https://user-images.githubusercontent.com/27583722/82118874-3fc68300-977a-11ea-86fe-af2ca6dbd7fa.png)
 ![6](https://user-images.githubusercontent.com/27583722/82118878-448b3700-977a-11ea-8698-e43dfd5db581.png)
 
-# Credits
+### Credits
 The game was developed by 4 students:
 
 Moustafa Tohamy @https://github.com/tohamybasha
