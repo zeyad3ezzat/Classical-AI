@@ -6,8 +6,12 @@ It's a simple game , we are solving through three algorithms BFS , DFS , A*
 
 
 
+### Credits
+The game was developed by 4 students:
 
+Moustafa Tohamy @https://github.com/tohamybasha
 
+Zeyad Ezzat @ https://github.com/zeyad3ezzat
 
 
 
