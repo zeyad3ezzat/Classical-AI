@@ -1,4 +1,4 @@
-#in this repo you will find two projects :
+# in this repo you will find two projects :
 
 ## 8 puzzle solver:
 
