@@ -7,7 +7,7 @@ It's a simple game , we are solving through three algorithms BFS , DFS , A*
 
 
 ### Credits
-The game was developed by 4 students:
+The game was developed by:
 
 Moustafa Tohamy @https://github.com/tohamybasha
 
@@ -65,7 +65,7 @@ AI Agents:
 ![6](https://user-images.githubusercontent.com/27583722/82118878-448b3700-977a-11ea-8698-e43dfd5db581.png)
 
 ### Credits
-The game was developed by 4 students:
+The game was developed by:
 
 Moustafa Tohamy @https://github.com/tohamybasha
 
