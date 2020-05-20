@@ -1,5 +1,6 @@
 # Tradional AI Search Problems :
 In Artificial Intelligence, Search techniques are universal problem-solving methods.Problem-solving agents in AI mostly used these search strategies or algorithms to solve a specific problem and provide the best result.
+
 in this repo we are implementing some of these algorithms , for example BFS,DFS,A*,Alpha-beta brunning 
 
 you can read more about these algorithms here :
