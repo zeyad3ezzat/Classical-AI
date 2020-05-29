@@ -1,19 +1,20 @@
 package Algorithm;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Stack;
-
 import main.Node;
 
-public class DepthStategy implements SearchStrategy {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Stack;
+public class DepthStrategy implements SearchStrategy {
 	Stack<Node> frontier;
 	ArrayList<Node> explored;
 	int counter=0;
-	public DepthStategy() {
-		super();
+	public DepthStrategy() {
+		
 		frontier=new Stack<>();
 		explored=new ArrayList<Node>();
 	}
@@ -21,13 +22,14 @@ public class DepthStategy implements SearchStrategy {
 	public boolean Tree_search(Node root) {
 		
 		frontier.push(root);
-		int i=0;
-		while(counter<=10000 && !frontier.isEmpty()) {//|| {i!=9 )
-			System.out.println(counter++);
-			Node state = frontier.pop();
-			//System.out.println(	Arrays.deepToString(state.getCurrentState()));
-			state.printMatrix(state.getCurrentState());
+		while(!frontier.isEmpty()){
+			Node state =frontier.pop();
+
+			System.out.print(counter+"    ");
+		//	System.out.println(	Arrays.deepToString(state));
+			System.out.println(	Arrays.deepToString(state.getCurrentState()));
 			state.setNextStates();
+			counter++;
 			
 			explored.add(state);
 			
@@ -36,13 +38,12 @@ public class DepthStategy implements SearchStrategy {
 			}
 			boolean foundInExploredList=false;
 			boolean foundInFrontierList=false;
-			
 			for (Node neighbour : state.getNextStatesList()) {
+				
 				// check to found if the neighbours had been explored before or not 
 				for (Node node : explored) {
 					if(Arrays.deepEquals(node.getCurrentState(), neighbour.getCurrentState()))	
-						{
-						foundInExploredList=true;
+						{foundInExploredList=true;
 						break;
 						}
 				}
@@ -54,18 +55,25 @@ public class DepthStategy implements SearchStrategy {
 						foundInFrontierList=true;
 						break;
 					}
+					
 				}
-				if(!foundInExploredList && !foundInFrontierList){
+
+				if(!(foundInExploredList||foundInFrontierList)){
 					frontier.push(neighbour);
-				}	
+				}
+				
+				
 			}
-			i++;
 			
 		}
-
+		
+		
+		
+		
+		
+		
 		
 		return false;
 	}
 
-	
 }

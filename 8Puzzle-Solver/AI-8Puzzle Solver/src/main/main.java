@@ -2,69 +2,52 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Stack;
 
-import Algorithm.DepthStategy;
+import Algorithm.AStrategy;
+import Algorithm.BreadthStrategy;
+import Algorithm.DepthStrategy;
 import Algorithm.SearchStrategy;
 
 public class main {
 
 	public static void main(String[] args) {
-				int[][] a = {
-						{1, 8, 2}, {0, 4, 3}, {7, 6, 5}
-					};
+		//int[][] a = {{1, 8, 2}, {7, 4, 3}, {0, 6, 5}};
+	//	int[][] a = {{1, 8, 2}, {0, 4, 3}, {7, 6, 5}};
+		int[][] a = {{1, 0, 3}, {2, 4, 5}, {6, 7, 8}};
+
+		int[][] b = {{1, 8, 2}, {0, 4, 3}, {7, 6, 5}};
+
+//		int[][] a = {{1, 3, 4}, {0, 2, 5}, {7, 8, 6}};
+//		int[][] b = {{1, 3, 4}, {2, 0, 5}, {7, 8, 6}};
+		int[][] c = {{1, 3, 0}, {4, 2, 5}, {7, 8, 6}};
+		int[][] d = {{1, 3, 4}, {7, 2, 5}, {0, 8, 6}};
+		int[][] e = {{1, 3, 4}, {0, 2, 5}, {7, 8, 6}};
+			Node nodeA =new Node(a);
+//			Node nodeB =new Node(a);
+			Node nodeC =new Node(c);
+			Node nodeD =new Node(d);
+			Node nodeE =new Node(e);
+			
+				SearchStrategy search=new AStrategy();
+//				SearchStrategy search=new BreadthStrategy();
+		//		SearchStrategy search=new DepthStrategy();
 				
-				long startTime = System.currentTimeMillis();
-				SearchStrategy search=new DepthStategy();
-				Node nodeA=new Node(a);
-				//Node nodeB=new Node(b);
-				
-				
-				if(isSolvable(a)){
-					search.Tree_search(nodeA);
+				if(search.Tree_search(nodeC)){
 					System.out.println("true");
+				}else{
+					System.out.println("false");
 				}
-				else {
-					System.out.println("FAAAALSE");
-				}
+
 				
-				long endTime = System.currentTimeMillis();
-				long duration = (endTime - startTime);
-				System.out.println("Taken time: "+duration+" m.seconds");
-//				ArrayList<Node> list=new ArrayList<>();
-//				list.add(nodeB);
-//				for (Node node : list) {
-//					if(Arrays.deepEquals(node.currentState, a))	
-//						System.out.println("true");
-//				}
-//				
+				
 
 
 				
 
 	}
-	//Checks if the Puzzle if solvable
-		public static boolean isSolvable(int[][] matrix) {
-			int count = 0;
-			List<Integer> array = new ArrayList<Integer>();
-			
-			for (int i = 0; i < matrix.length; i++) {
-				for (int j = 0; j < matrix.length; j++) {
-					array.add(matrix[i][j]);
-				}
-			}
-			//Take a copy
-			Integer[] anotherArray = new Integer[array.size()];
-			array.toArray(anotherArray);
-			for (int i = 0; i < anotherArray.length - 1; i++) {
-				for (int j = i + 1; j < anotherArray.length; j++) {
-					if (anotherArray[i] != 0 && anotherArray[j] != 0 && anotherArray[i] > anotherArray[j]) {
-						count++;
-					}
-				}
-			}
-			return count % 2 == 0;
-		}
 	
 
 }
